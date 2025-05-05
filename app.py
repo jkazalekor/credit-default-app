@@ -31,7 +31,7 @@ pg = st.navigation({
 
 # --- SHARED CONTENT (applies to all pages) ---
 st.logo("assets/logo.png")  # Optional: Replace with your actual logo
-st.sidebar.markdown("Made with ❤️ by [JK Azalekor](https://github.com/jkazalekor)")
+st.sidebar.markdown("Made by [JK Azalekor](https://github.com/jkazalekor)")
 
 # --- RUN PAGE ---
 pg.run()

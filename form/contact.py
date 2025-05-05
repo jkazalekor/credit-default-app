@@ -3,7 +3,7 @@ import re
 import requests
 
 # --- Load webhook URL from secrets.toml ---
-WEBHOOK_URL = st.secrets.get("WEBHOOK_URL")  # You’ll set this in .streamlit/secrets.toml
+WEBHOOK_URL = st.secrets.get["WEBHOOK_URL"]  # You’ll set this in .streamlit/secrets.toml
 
 # --- Basic email validator using regex ---
 def is_valid_email(email):
