@@ -12,7 +12,6 @@ def is_valid_email(email):
 
 # --- Contact form logic ---
 def contact_form():
-    st.caption(f"🔗 Webhook URL loaded: {WEBHOOK_URL}") 
     with st.form("contact_form"):
         name = st.text_input("Your Name")
         email = st.text_input("Email Address")
