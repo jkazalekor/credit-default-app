@@ -45,6 +45,7 @@ def contact_form():
 
         # --- Send to webhook (e.g., Pabbly, Zapier, Make.com) ---
         try:
+            st.caption(f"🔗 Webhook URL loaded: {WEBHOOK_URL}")
             st.write("DEBUG:", WEBHOOK_URL)
             response = requests.post(WEBHOOK_URL, json=payload)
             if response.status_code == 200:
