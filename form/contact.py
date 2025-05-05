@@ -12,6 +12,7 @@ def is_valid_email(email):
 
 # --- Contact form logic ---
 def contact_form():
+    st.caption(f"🔗 Webhook URL loaded: {WEBHOOK_URL}") 
     with st.form("contact_form"):
         name = st.text_input("Your Name")
         email = st.text_input("Email Address")
@@ -45,8 +46,6 @@ def contact_form():
 
         # --- Send to webhook (e.g., Pabbly, Zapier, Make.com) ---
         try:
-            st.caption(f"🔗 Webhook URL loaded: {WEBHOOK_URL}")
-            st.write("DEBUG:", WEBHOOK_URL)
             response = requests.post(WEBHOOK_URL, json=payload)
             if response.status_code == 200:
                 st.success("🎉 Your message was sent successfully!", icon="✅")
